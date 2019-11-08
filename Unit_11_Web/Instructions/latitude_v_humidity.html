@@ -1,57 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <!--Required meta tags-->
+<html lang="en-us">
+  <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   
-    <!--Bootstrap CSS-->
-    <link rel="stylesheet" 
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
-    crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    
     <title>WeatherPy</title>
-</head>
-<body>
 
-    <!--Create navbar with drop down list and other buttons/links to pages-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-expand-lg fixed-top">
-        <div class="col-xs-9">
-            <a class="navbar-brand" href="index.html" id="logo">WeatherPy - Latitude</a>
-        </div>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">                 
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Plots
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="latitude_v_cloudiness.html">Latitude vs. Cloudiness</a>
-                        <a class="dropdown-item" href="latitude_v_humidity.html">Latitude vs. Humidity</a>
-                        <a class="dropdown-item" href="latitude_v_maxtemp.html">Latitude vs. Max Temperature</a>
-                        <a class="dropdown-item" href="latitude_v_windspeed.html">Latitude vs. Wind Speed</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                </li>  
-                <li class="navbar-item">
-                    <a href="comparison.html" class="nav-link">Comparison</a>
-                </li>              
-                <li class="navbar-item">
-                    <a href="data.html" class="nav-link">Data</a>
-                </li>    
-            </ul>
-        </div>
-       </nav>
+    <link rel="stylesheet" href="bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="styles.css" media="screen">
 
-        <div class="container" style="margin-top:30px">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  </head>
+
+  <body>
+      <!--Create navbar with drop down list and other buttons/links to pages-->
+    <nav class="navbar navbar-default">
+      <div class="row">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="col-xs-9">
+            <a class="navbar-brand" href="index.html" id="logo">WeatherPy</a>
+          </div>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right navbar-right-custom">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Plots
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="latitude_v_cloudiness.html">Latitude vs. Cloudiness</a></li>
+                <li><a href="latitude_v_humidity.html">Latitude vs. Humidity</a></li>
+                <li><a href="latitude_v_maxtemp.html">Latitude vs. Max Temperature</a></li>
+                <li><a href="latitude_v_windspeed.html">Latitude vs. Wind Speed</a></li>
+              </ul>
+            </li>
+            <li><a href="comparison.html">Comparison</a></li>
+            <li><a href="data.html">Data</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+            <section class="row">
+              <div class="col-md-8">
+                <article class="description-content">
+                  <h1 class="description-header">Latitude vs. Humidity</h1>
+                  <hr class="description-hr"/>
+                  <img src="C:\Users\Melissa Morgan\Documents\SMU\SMU-DAL-DATA-PT-08-2019-U-C\02-Homework\11-Web\Instructions\lat_images\Lat_vs_Humidity.png" alt="" class="img-responsive"/>
+                  <p>
+                    
+                    Analysis:  Based on the scatter plot, the correlation between humidity is weak.  However, there is a slightly larger cluster of northern hemisphere cities with high humidity (above 60%). 
+                  </p>
+                </article>
+              </div>
+              <div class="col-md-4">
+                <section id="area">
+                  <div class="content">
+                    <h2 class="header">Visualizations</h2>
+                    <hr />
+                    <div id="images">
+                        <a href="latitude_v_cloudiness.html"><img src="C:\Users\Melissa Morgan\Documents\SMU\SMU-DAL-DATA-PT-08-2019-U-C\02-Homework\11-Web\Instructions\lat_images\Lat_vs_Cloudiness.png" alt="Latitude vs. Cloudiness" class="photo"></a>
+                        <a href="latitude_v_humidity.html"><img src="C:\Users\Melissa Morgan\Documents\SMU\SMU-DAL-DATA-PT-08-2019-U-C\02-Homework\11-Web\Instructions\lat_images\Lat_vs_Humidity.png" alt="Latitude vs. Humidity" class="photo"></a>
+                        <a href="latitude_v_maxtemp.html"><img src="C:\Users\Melissa Morgan\Documents\SMU\SMU-DAL-DATA-PT-08-2019-U-C\02-Homework\11-Web\Instructions\lat_images\Lat_vs_Temp.png" alt="Latitude vs. Max Temperature" class="photo"></a>
+                        <a href="latitude_v_windspeed.html"><img src="C:\Users\Melissa Morgan\Documents\SMU\SMU-DAL-DATA-PT-08-2019-U-C\02-Homework\11-Web\Instructions\lat_images\Lat_vs_Wind_Speed.png" alt="Latitude vs. Wind Speed" class="photo"></a>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </section>
+          </div>
+       <div class="container" style="margin-top:30px">
             
             <div class="card">
-                <img width="200" class="card-img-top" alt="Card header image" src="C:\Users\Melissa Morgan\Documents\SMU\SMU-DAL-DATA-PT-08-2019-U-C\02-Homework\11-Web\Instructions\lat_images\Lat_vs_Humidity.png">
+                <img width="200" class="card-img-top" alt="Card header image" src="C:\Users\Melissa Morgan\Documents\SMU\SMU-DAL-DATA-PT-08-2019-U-C\02-Homework\11-Web\Instructions\lat_images\Lat_vs_Cloudiness.png">
                 <div class="card-body">
                     <h5 class="card-title">Card Title</h5>
                     <p class="card-text">Lorem ipsum dolor</p>
