@@ -10,13 +10,16 @@
     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
     crossorigin="anonymous">
-    <title>Latitude</title>
+    <link rel="stylesheet" href="style.css">
+    <title>WeatherPy</title>
 </head>
 <body>
-    <!--Create navbar with drop down list and other buttons with links to additional pages-->
+
+    <!--Create navbar with drop down list and other buttons/links to pages-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-expand-lg fixed-top">
-        <a href="#" class="navbar-brand">Latitude</a>
-        
+        <div class="col-xs-9">
+            <a class="navbar-brand" href="index.html" id="logo">WeatherPy - Latitude</a>
+        </div>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -27,23 +30,24 @@
                         Plots
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="latitude_v_cloudiness.html">Latitude vs Cloudiness</a>
-                        <a class="dropdown-item" href="#">Latitude vs Humidity</a>
-                        <a class="dropdown-item" href="#">Latitude vs Temperature</a>
-                        <a class="dropdown-item" href="#">Latitude vs Wind Speed</a>
-                    </div>
+                        <a class="dropdown-item" href="latitude_v_cloudiness.html">Latitude vs. Cloudiness</a>
+                        <a class="dropdown-item" href="latitude_v_humidity.html">Latitude vs. Humidity</a>
+                        <a class="dropdown-item" href="latitude_v_maxtemp.html">Latitude vs. Max Temperature</a>
+                        <a class="dropdown-item" href="latitude_v_windspeed.html">Latitude vs. Wind Speed</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
                 </li>  
-                
                 <li class="navbar-item">
-                    <a href="#" class="nav-link">Comparison</a>
+                    <a href="comparison.html" class="nav-link">Comparison</a>
                 </li>              
                 <li class="navbar-item">
-                    <a href="#" class="nav-link">Data</a>
+                    <a href="data.html" class="nav-link">Data</a>
                 </li>    
             </ul>
         </div>
        </nav>
-        
+     
 	    <div class="content">
         	<div class="container-fluid">
                 <div class="row">
