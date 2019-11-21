@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars Data</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="jumbotron text-center">
+      <h1>Mars Data</h1>
+      <h3>Last Scraped: {{mars.last_updated}}</h3>
+      <input type="button" onclick="window.location.href='/scrape'" value="SCRAPE" />
+    </div>
+  </div>
+  </div>
+  <div>
+    <h3>{{mars.newsTitle}}</h3>
+    <a href="{{mars.newsLink}}" target="_blank">Read The Article HERE</a>
+  </div>
+  <div style="display: inline-block; float:left;">
+    <img src="{{mars.featImageLink}}" alt="BALLS" height="500px" width="700px" />
+  </div>
+  <div style="display: inline-block;float:right;white-space: pre-wrap;">
+    <p>{{mars.weatherInfo}}</p>
+    <table>{{mars.marsFacts | safe}}</table>
+  </div>
+  <br>
+  <br>
+  <div>
+    {% for hem in mars.hemisphereInfo %}
+    <strong>
+      <h5>{{hem.title}}</h5>
+    </strong>
+    <img src="{{hem.link}}" height="300px" width="300px" />
+    {% endfor %}
+  </div>
+</body>
+
+</html>
