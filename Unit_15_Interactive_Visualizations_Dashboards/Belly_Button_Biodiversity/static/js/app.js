@@ -1,19 +1,20 @@
-// Unit_15_Melissa_Morgan
-
 function buildMetadata(sample) {
 
     // @TODO: Complete the following function that builds the metadata panel
+
     // Use `d3.json` to fetch the metadata for a sample
+
     d3.json("/metadata/" + sample).then((metaData) => {
         console.log(metaData)
 
         // Use d3 to select the panel with id of `#sample-metadata`
+
         d3.select("#sample-metadata")
 
         // Use `.html("") to clear any existing metadata
         .html("")
+            // Use `Object.entries` to add each key and value pair to the panel
 
-        // Use `Object.entries` to add each key and value pair to the panel
         for (let [key, value] of Object.entries(metaData)) {
             console.log(`${key}: ${value}`);
             // Hint: Inside the loop, you will need to use d3 to append new
@@ -23,6 +24,7 @@ function buildMetadata(sample) {
                 .text(`${key}: ${value}`)
                 .append("br");
         }
+
     });
 }
 
@@ -30,6 +32,7 @@ function buildCharts(sample) {
 
     // @TODO: Use `d3.json` to fetch the sample data for the plots
     d3.json("/samples/" + sample).then((sampleData) => {
+
         console.log(sampleData);
 
         // @TODO: Build a Bubble Chart using the sample data
@@ -45,6 +48,7 @@ function buildCharts(sample) {
         };
 
         var data = [trace1];
+
         var layout = {
             title: 'Bubble Chart Hover Text',
             showlegend: false,
