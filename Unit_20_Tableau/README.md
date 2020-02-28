@@ -1,5 +1,5 @@
 # Tableau  -  Citi Bike Data Analytics
 
-Jupyter Notebook - contains code used to collect the sample data.  
+Jupyter Notebook - contains code used to combine files and select the sample data.
 
-See writeup for project overview and findings.  
+PDF File - writeup with overview and findings.  
